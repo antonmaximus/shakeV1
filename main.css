@@ -1,0 +1,408 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333
+}
+img {
+    border: 0
+}
+#container {
+    position: absolute;
+    background-color: transparent!important;
+    width: 320px;
+    height: 416px;
+    top: 50%;
+    left: 50%;
+    margin: -208px 0 0 -160px
+}
+#mainContainer {
+    width: 320px;
+    height: 416px;
+    overflow: hidden
+}
+#baseContainer {
+    width: 320px;
+    height: 416px;
+    position: relative;
+    display: none
+}
+#baseContainer.commence {
+    display: block
+}
+#carContainer,
+#mainBG,
+#txt1,
+#wheelFront,
+#wheelRear {
+    display: none
+}
+#baseContainer.commence #mainBG {
+    position: absolute;
+    height: 832px;
+    display: block;
+    transform: translate3d(0, -416px, 0);
+    -webkit-transform: translate3d(0, -416px, 0);
+    animation: bgMoveY 2.3s;
+    -webkit-animation: bgMoveY 2.3s
+}
+@-webkit-keyframes bgMoveY {
+    from {
+        -webkit-transform: translate3d(0, 0, 0) translateZ(0)
+    }
+    to {
+        -webkit-transform: translate3d(0, -416px, 0) translateZ(0)
+    }
+}
+#baseContainer.commence #txt1 {
+    width: 261px;
+    height: 24px;
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    -webkit-transform: translate3d(30px, 28px, 0);
+    -webkit-animation: txt_1 1.6s
+}
+@-webkit-keyframes txt_1 {
+    from {
+        -webkit-transform: translate3d(30px, 320px, 0) translateZ(0);
+        opacity: 0
+    }
+    to {
+        -webkit-transform: translate3d(30px, 28px, 0) translateZ(0);
+        opacity: 1
+    }
+}
+#baseContainer.commence #carContainer {
+    display: block;
+    position: absolute;
+    background-color: transparent;
+    width: 300px;
+    height: 141px;
+    left: 10px;
+    top: 523px
+}
+#baseContainer.commence.anim #carContainer {
+    left: 10px;
+    top: 0;
+    -webkit-transform: translate3d(0, 523px, 0);
+    -webkit-animation: mycarXY 2.2s 0s;
+    pointer-events: none
+}
+@-webkit-keyframes mycarXY {
+    from {
+        -webkit-transform: scale(.8) translate3d(50px, 623px, 0)
+    }
+    to {
+        -webkit-transform: scale(1) translate3d(0, 523px, 0)
+    }
+}
+#carContainer .car-lights,
+#carContainer .main-car,
+#carContainer .wheels {
+    position: absolute;
+    width: 100%
+}
+#carContainer .wheels li img {
+    width: 100%;
+    height: 100%
+}
+#baseContainer.commence.anim #wheelFront {
+    list-style: none;
+    position: absolute;
+    display: block;
+    width: 56px;
+    height: 56px;
+    right: 67px;
+    top: 71px;
+    -webkit-transform: rotate3d(0, 1, 0, 68deg) rotate(-93deg) translate3d(0, 0, 0);
+    -webkit-animation: myFrontWheel 2.2s 0s
+}
+#baseContainer.commence.anim #wheelRear {
+    list-style: none;
+    position: absolute;
+    display: block;
+    width: 34px;
+    height: 34px;
+    right: 6px;
+    top: 72px;
+    -webkit-transform: rotate3d(0, 1, 0, 75deg) rotate(-98deg) translate3d(0, 0, 0);
+    -webkit-animation: myRearWheel 2.2s 0s
+}
+@-webkit-keyframes myFrontWheel {
+    from {
+        -webkit-transform: rotate3d(0, 1, 0, 68deg) rotate(0deg) translate3d(0, 0, 0);
+        opacity: 1
+    }
+    to {
+        -webkit-transform: rotate3d(0, 1, 0, 68deg) rotate(-93deg) translate3d(0, 0, 0);
+        opacity: 1
+    }
+}
+@-webkit-keyframes myRearWheel {
+    from {
+        -webkit-transform: rotate3d(0, 1, 0, 75deg) rotate(0deg) translate3d(0, 0, 0);
+        opacity: 1
+    }
+    to {
+        -webkit-transform: rotate3d(0, 1, 0, 75deg) rotate(-98deg) translate3d(0, 0, 0);
+        opacity: 1
+    }
+}
+#clickScreen {
+    position: absolute;
+    top: 104px;
+    left: 20px;
+    width: 280px;
+    height: 141px;
+    z-index: 999;
+    cursor: pointer
+}
+#nav {
+    position: absolute;
+    top: 289px;
+    left: 38px;
+    display: block;
+    z-index: 10
+}
+#nav.hide {
+    display: none
+}
+#nav li {
+    list-style: none;
+    position: relative;
+    display: inline-block;
+    height: 34px;
+    width: 34px;
+    padding: 0 1px;
+    margin: 0;
+    cursor: pointer
+}
+#nav ul {
+    margin: 0;
+    padding: 0
+}
+#nav li a {
+    position: absolute;
+    border: 4px solid rgba(255, 255, 255, 0);
+    border-radius: 32px;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0);
+    height: 33px;
+    width: 33px;
+    display: block;
+    -moz-transform: rotate(0deg);
+    -webkit-animation: btnAnim_1 .3s;
+    -webkit-tap-highlight-color: transparent
+}
+#nav li a.hide {
+    display: none
+}
+#nav li a.appear {
+    display: block
+}
+@-webkit-keyframes btnAnim_1 {
+    from {
+        -webkit-transform: scale(.3, .3) translate3d(0, 0, 0) translateZ(0)
+    }
+    to {
+        -webkit-transform: scale(1, 1) translate3d(0, 0, 0) translateZ(0)
+    }
+}
+#nav li a.active {
+    border: 4px solid #FFF;
+    border-radius: 32px;
+    box-shadow: 0 0 2px #888;
+    height: 33px;
+    width: 32px;
+    transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    animation: myRoundBtn .2s
+}
+@keyframes myRoundBtn {
+    from {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(45deg)
+    }
+}
+@-webkit-keyframes myRoundBtn {
+    from {
+        -webkit-transform: rotate(0deg)
+    }
+    to {
+        -webkit-transform: rotate(45deg)
+    }
+}
+#cta {
+    position: absolute;
+    top: 336px;
+    left: 87px;
+    cursor: pointer
+}
+@keyframes loader {
+    0% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
+@-webkit-keyframes loader {
+    0% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
+.circle {
+    float: left;
+    width: .5em;
+    height: .5em;
+    background-color: #3bb6f7;
+    border-radius: 100%;
+    box-shadow: 0 1px 2px #b1b1b1;
+    animation: loader .5s cubic-bezier(.17, .46, .21, .98) 0 infinite alternate;
+    -webkit-animation: loader .5s cubic-bezier(.17, .46, .21, .98) 0 infinite alternate
+}
+.circle:nth-child(2) {
+    transform: translateX(.33333333em);
+    -webkit-transform: translateX(.33333333em);
+    animation-delay: .2s;
+    -webkit-animation-delay: .2s
+}
+.circle:nth-child(3) {
+    transform: translateX(.66666667em);
+    -webkit-transform: translateX(.66666667em);
+    animation-delay: .4s;
+    -webkit-animation-delay: .4s
+}
+.loader {
+    position: absolute;
+    top: 53px;
+    left: 150px;
+    height: .5em;
+    width: 2.16666667em;
+    margin-left: -1.08333333em;
+    margin-top: -.25em;
+    padding: 5px;
+    background-color: transparent
+}
+.loader.init {
+    position: absolute;
+    top: 208px;
+    left: 160px;
+    display: block;
+    background-color: transparent
+}
+@keyframes fade_in {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+@-webkit-keyframes fade_in {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+.ccontainer {
+    width: 300px;
+    height: 300px
+}
+.cimageholder {
+    position: absolute;
+    top: 0;
+    left: 0
+}
+.cimage {
+    opacity: 0;
+    -webkit-backface-visibility: hidden
+}
+.cspriteholder {
+    position: absolute;
+    width: 320px;
+    height: 278px;
+    top: -108px;
+    left: -10px;
+    overflow: hidden
+}
+.bsprite,
+.csprite {
+    position: relative
+}
+#txt2 {
+    position: absolute;
+    top: 252px;
+    left: 67px
+}
+#txt3 {
+    position: absolute;
+    top: 356px;
+    left: -1px;
+    cursor: pointer
+}
+#txt4 {
+    position: absolute;
+    top: 391px;
+    left: 10px;
+    cursor: pointer
+}
+#logo {
+    position: absolute;
+    top: 378px;
+    right: 11px;
+    cursor: pointer
+}
+#colortxt {
+    position: absolute;
+    top: 271px;
+    left: 58px;
+    overflow: hidden;
+    width: 200px;
+    height: 20px
+}
+#colortxtimg {
+    position: relative;
+    top: -80px
+}
+#bgimgholder {
+    position: absolute;
+    top: 416px;
+    left: 0;
+    width: 320px;
+    height: 240px;
+    overflow: hidden;
+    display: none
+}
+#bg,
+#bgs {
+    cursor: pointer
+}
+#bgfix {
+    position: absolute;
+    top: 620px;
+    left: 164px
+}
+#deadspot {
+    width: 300px;
+    height: 86px;
+    position: absolute;
+    top: 252px;
+    left: 10px;
+    cursor: default
+}
+.hide {
+    display: none
+}
+.disappear {
+    opacity: 0
+}
