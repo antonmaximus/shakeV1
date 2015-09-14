@@ -235,14 +235,15 @@ window.onload = function() {
     window.addEventListener('shake', shakeEventDidOccur, false);
 
 
-    var datPage = 5; 
+    var datPage = 0; 
+    var nameArray = ['Super White', 'Classic Silver', 'Slate', 'Barcelona Red', 'Blue Crush', 'Black Sand']
     //shake event callback
     function shakeEventDidOccur () {
 
         //put your own code here etc.
-        alert('Shake!');
+        alert('Your New Color is: ' + nameArray[datPage]);
         currentPage = datPage;
-        datPage = datPage >= 6 ? 0 : datPage;
+        datPage = datPage >= 6 ? 0 : datPage++;
         loadPage(datPage);
     }
 
