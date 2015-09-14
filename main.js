@@ -237,7 +237,7 @@ window.onload = function() {
 
 
     var datPage = 0; 
-    var nameArray = ['Super White', 'Classic Silver', 'Slate', 'Barcelona Red', 'Blue Crush', 'Black Sand Pearl']
+    var nameArray = ['Super White Metallic', 'Classic Silver Metallic', 'Slate Metallic', 'Barcelona Red Metallic', 'Blue Crush Metallic', 'Black Sand Pearl']
     //shake event callback
     function shakeEventDidOccur () {
 
