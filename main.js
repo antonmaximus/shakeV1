@@ -243,7 +243,8 @@ window.onload = function() {
         //put your own code here etc.
         alert('Your New Color is: ' + nameArray[datPage]);
         currentPage = datPage;
-        datPage = datPage >= 6 ? 0 : datPage++;
+        datPage = datPage >= 6 ? 0 : datPage;
+        datPage += 1;
         loadPage(datPage);
     }
 
