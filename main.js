@@ -241,12 +241,13 @@ window.onload = function() {
     function shakeEventDidOccur () {
 
         //put your own code here etc.
-        alert('Your New Color is: ' + nameArray[datPage]);
+        alert('You Selected:\n' + nameArray[datPage]);
         currentPage = datPage;
-        datPage = datPage >= 6 ? 0 : datPage;
         loadPage(datPage);
-        datPage += 1;
         
+        datPage += 1;
+        datPage = datPage >= 6 ? 0 : datPage;
+
     }
 
 
