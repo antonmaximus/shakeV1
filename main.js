@@ -67,17 +67,6 @@ function onStageLoad() {
                 duration: 800
             })
         }
-    }, 2e3), setTimeout(function() {
-        for (var e = 1; 6 >= e; e++) {
-            var t = 80;
-            1 == e && (t = 0),
-                function(e) {
-                    setTimeout(function() {
-                        var t;
-                        t = document.getElementById("button" + [e]), t.className = "appear"
-                    }, t * e)
-                }(e)
-        }
     }, 2e3)
 }
 var dynID = 10,
@@ -219,18 +208,18 @@ window.onload = function() {
 
 
     // for (var jj = 1; 6 >= jj; jj++) {
-        var jj = 6;
-        var btnObj;
-        btnObj = document.getElementById("button" + [jj]),
-            function(e) {
-                btnObj.addEventListener(tapEvent, function(t) {
-                    console.log(t);
-                    console.log(this)
+        // var jj = 6;
+        // var btnObj;
+        // btnObj = document.getElementById("button" + [jj]),
+        //     function(e) {
+        //         btnObj.addEventListener(tapEvent, function(t) {
+        //             console.log(t);
+        //             console.log(this)
 
-                    t.preventDefault(), currentPage != e - 1 && (currentPage = e - 1, loadPage(currentPage), removeActive(), this.className = "active")
+        //             t.preventDefault(), currentPage != e - 1 && (currentPage = e - 1, loadPage(currentPage), removeActive(), this.className = "active")
 
-                }, !1)
-            }(jj)
+        //         }, !1)
+        //     }(jj)
     // }
 
 

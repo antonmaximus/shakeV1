@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333
+    background-color: #FFF
 }
 img {
     border: 0
@@ -238,7 +238,7 @@ img {
 }
 #cta {
     position: absolute;
-    top: 336px;
+    top: 320px;
     left: 87px;
     cursor: pointer
 }
@@ -341,7 +341,7 @@ img {
 }
 #txt2 {
     position: absolute;
-    top: 252px;
+    top: 266px;
     left: 67px
 }
 #txt3 {
@@ -364,7 +364,7 @@ img {
 }
 #colortxt {
     position: absolute;
-    top: 271px;
+    top: 288px;
     left: 58px;
     overflow: hidden;
     width: 200px;
