@@ -184,7 +184,8 @@ var loadPage = function(e) {
     clickOptions = document.getElementById("linkoptions"),
     clickDeadspot = document.getElementById("deadspot"),
     tapEvent = "click";
-clickCTA.addEventListener(tapEvent, function() {}, !1), clickHeadline.addEventListener(tapEvent, function() {}, !1), clickCorolla.addEventListener(tapEvent, function() {}, !1), clickLogo.addEventListener(tapEvent, function() {}, !1), clickCar.addEventListener(tapEvent, function() {}, !1), clickBG.addEventListener(tapEvent, function() {}, !1), clickOptions.addEventListener(tapEvent, function() {}, !1);
+// clickCTA.addEventListener(tapEvent, function() {}, !1), clickHeadline.addEventListener(tapEvent, function() {}, !1), 
+clickCorolla.addEventListener(tapEvent, function() {}, !1), clickLogo.addEventListener(tapEvent, function() {}, !1), clickCar.addEventListener(tapEvent, function() {}, !1), clickBG.addEventListener(tapEvent, function() {}, !1), clickOptions.addEventListener(tapEvent, function() {}, !1);
 
 
 clickDeadspot.addEventListener(tapEvent, function() {}, !1);
@@ -236,15 +237,15 @@ window.onload = function() {
 
 
     var datPage = 0; 
-    var nameArray = ['Super White', 'Classic Silver', 'Slate', 'Barcelona Red', 'Blue Crush', 'Black Sand']
+    var nameArray = ['Super White', 'Classic Silver', 'Slate', 'Barcelona Red', 'Blue Crush', 'Black Sand Pearl']
     //shake event callback
     function shakeEventDidOccur () {
 
         //put your own code here etc.
-        alert('You Selected:\n' + nameArray[datPage]);
+        alert('Your New Color is:\n' + nameArray[datPage]);
         currentPage = datPage;
         loadPage(datPage);
-        
+
         datPage += 1;
         datPage = datPage >= 6 ? 0 : datPage;
 
