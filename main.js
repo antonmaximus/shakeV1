@@ -242,14 +242,14 @@ window.onload = function() {
     window.addEventListener('shake', shakeEventDidOccur, false);
 
 
-    var currentPage = 5; 
+    var datPage = 5; 
     //shake event callback
     function shakeEventDidOccur () {
 
         //put your own code here etc.
         alert('Shake!');
-        currentPage = currentPage >= 6 ? 0 : currentPage;
-        loadPage(currentPage);
+        datPage = datPage >= 6 ? 0 : datPage;
+        loadPage(datPage);
     }
 
 
