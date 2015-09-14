@@ -224,7 +224,11 @@ window.onload = function() {
         btnObj = document.getElementById("button" + [jj]),
             function(e) {
                 btnObj.addEventListener(tapEvent, function(t) {
+                    console.log(t);
+                    console.log(this)
+
                     t.preventDefault(), currentPage != e - 1 && (currentPage = e - 1, loadPage(currentPage), removeActive(), this.className = "active")
+
                 }, !1)
             }(jj)
     // }
@@ -248,6 +252,7 @@ window.onload = function() {
 
         //put your own code here etc.
         alert('Shake!');
+        currentPage = datPage;
         datPage = datPage >= 6 ? 0 : datPage;
         loadPage(datPage);
     }
