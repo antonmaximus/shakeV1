@@ -1,3 +1,5 @@
+var prefixAssets = './images/';
+
 function preloadimages(e) {
     function t() {
         a++, a == e.length && i(n)
@@ -52,7 +54,7 @@ function onStageLoad() {
     }
     if (document.getElementById("container").style.display = "block", 1 == animate) {
         var t = document.getElementById("bgimgholder");
-        t.innerHTML = '<img class="bsprite anim" src="images/bg_sprite.jpg" alt="" id="bgs">';
+        t.innerHTML = '<img class="bsprite anim" src="' + prefixAssets + '/bg_sprite.jpg" alt="" id="bgs">';
         var n = document.getElementById("bgs");
         n.addEventListener(tapEvent, function() {}, !1);
         var a = document.getElementsByClassName("bsprite anim")[0];
@@ -75,8 +77,8 @@ var dynID = 10,
     loadedDivs = new Array,
     currentDiv, initialized = !1,
     colorsArray = ["Super_White", "Classic_Silver_Metallic", "Slate_Metallic", "Barcelona_Red_Metallic", "Blue_Crush_Metallic", "Black_Sand_Pearl"],
-    carArray = ["images/car_white.png", "images/car_gray1.png", "images/car_gray2.png", "images/car_red.png", "images/car_blue.png", "images/car_black.png"],
-    spriteArray = ["images/smoke_white.png", "images/smoke_gray1.png", "images/smoke_gray2.png", "images/smoke_red.png", "images/smoke_blue.png", "images/smoke_black.png"],
+    carArray = [prefixAssets + "car_white.png", prefixAssets + "car_gray1.png", prefixAssets + "car_gray2.png", prefixAssets + "car_red.png", prefixAssets + "car_blue.png", prefixAssets + "car_black.png"],
+    spriteArray = [prefixAssets + "smoke_white.png", prefixAssets + "smoke_gray1.png", prefixAssets + "smoke_gray2.png", prefixAssets + "smoke_red.png", prefixAssets + "smoke_blue.png", prefixAssets + "smoke_black.png"],
     spriteHeight = 7420,
     animate = !1;
 ! function() {
@@ -196,7 +198,7 @@ var iOSversion = function() {
     }
 };
 window.onload = function() {
-    preloadimages(["images/txt_colors.png", "images/car_blue_initial.png", "images/bg.jpg", "images/txt1.png"]).done(function() {
+    preloadimages([prefixAssets + "txt_colors.png", prefixAssets + "car_blue_initial.png", prefixAssets + "bg.jpg", prefixAssets + "txt1.png"]).done(function() {
         var e = document.getElementById("preLoader");
         if (e.parentNode.removeChild(e), navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPhone/i)) {
             animate = !0;
